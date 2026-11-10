@@ -1,0 +1,12 @@
+{
+  "agent": "ddqn",
+  "reward": "sparse",
+  "architecture": "CandidateCNN",
+  "feature_size": 477,
+  "observation_schema": "garbage_afterstate_v5",
+  "source_checkpoint": "D:\\Code\\REL_Game\\DEMO\\models\\challenge_ddqn_sparse.pt",
+  "source_checkpoint_sha256": "309e8a01d7e10187876befae280d0093a01781af9e5f121c4c709c825a383e37",
+  "inference_file": "challenge_ddqn_sparse.npz",
+  "inference_file_sha256": "b786d8ddcfd28de7f059b96ea795be2314e6afb9def64c554b9763cbea5840e9",
+  "training": "disabled"
+}

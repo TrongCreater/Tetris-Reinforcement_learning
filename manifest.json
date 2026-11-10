@@ -1,0 +1,36 @@
+{
+  "product": "Tetris Studio RL Arcade",
+  "version": "1.1.0",
+  "platform": "Windows x64 desktop",
+  "launch": "START_DEMO.cmd",
+  "interface": "Native WinForms window; no browser",
+  "offline": true,
+  "audio": false,
+  "training": false,
+  "modes": {
+    "survival_agent": {
+      "agent": "DDQN + Danger",
+      "checkpoint": "models/survival_ddqn_danger.npz",
+      "source": "demo_realtime_cpu/model/ddqn_danger.npz",
+      "sha256": "7eb20b7376e80251b57b54ec95fad55c4153d7cf28fe35d222386e7198181888"
+    },
+    "challenge_agent": {
+      "agent": "DDQN + Sparse",
+      "checkpoint": "models/challenge_ddqn_sparse.npz",
+      "source_checkpoint_copy": "models/challenge_ddqn_sparse.pt",
+      "source_checkpoint_sha256": "309e8a01d7e10187876befae280d0093a01781af9e5f121c4c709c825a383e37",
+      "inference_export_sha256": "b786d8ddcfd28de7f059b96ea795be2314e6afb9def64c554b9763cbea5840e9",
+      "source_run": "results/runs/garbage_focused_wells_v6_5000_20261030/seed_101/ddqn__sparse/checkpoint_best_validation.pt",
+      "evaluation": "87.5% solved on 40 paired held-out boards; one training seed"
+    }
+  },
+  "runtime": {
+    "python": "3.12 embedded Windows x64",
+    "numpy": "2.5.4",
+    "gymnasium": "1.4.0",
+    "dotnet": "10 Windows Desktop Runtime",
+    "torch_required_at_runtime": false,
+    "browser_required": false
+  },
+  "challenge_levels": 8
+}
